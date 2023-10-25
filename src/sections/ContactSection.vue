@@ -1,5 +1,6 @@
 <template>
-    <h1 class="display-2 font-weight-bold mb-4">
+    <v-container>
+        <h1 class="display-2 font-weight-bold mb-4">
         お問い合わせ
         </h1>
     <form @submit.prevent="submit">
@@ -41,6 +42,7 @@
     <v-btn
         class="me-4"
         type="submit"
+        @click="onSubmit"
     >
         送信
     </v-btn>
@@ -49,6 +51,7 @@
         クリア
     </v-btn>
     </form>
+    </v-container>
 </template>
 
 <script setup>
@@ -87,4 +90,5 @@ const items = useField('items')
 const submit = handleSubmit(values => {
     alert(JSON.stringify(values, null, 2))
 })
+
 </script>
