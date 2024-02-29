@@ -1,6 +1,6 @@
 <template>
   <Header></Header>
-  <v-main class="pt-0">
+  <v-main class="pt-0"> 
     <!-- サイトの説明 -->
     <section ref="aboutRef">
       <AboutSection name="AboutSection"></AboutSection>
@@ -32,69 +32,69 @@
     </section>
 
     <!-- 問い合わせフォーム -->
-    <section ref="contactRef" class="padding">
+    <!-- <section ref="contactRef" class="padding">
       <ContactSection name="ContactSection" ></ContactSection>
-    </section>
+    </section> -->
   </v-main>
 </template>
 
 <script setup>
-import Header from '@/components/home/parts/HomeHeader.vue';
-import AboutSection from '@/components/home/section/AboutSection.vue';
-import ProjectSection from '@/components/home/section/ProjectSection.vue';
+import Header from '@/components/home/parts/HomeHeader.vue'
+import AboutSection from '@/components/home/section/AboutSection.vue'
+import ProjectSection from '@/components/home/section/ProjectSection.vue'
 import SkillSection from '@/components/home/section/SkillSection.vue'
-import BlogSection from '@/components/home/section/BlogSection.vue';
-import GallerySection from '@/components/home/section/GallerySection.vue';
-import CarrerSection from '@/components/home/section/CarrerSection.vue';
-import ContactSection from '@/components/home/section/ContactSection.vue';
+import BlogSection from '@/components/home/section/BlogSection.vue'
+import GallerySection from '@/components/home/section/GallerySection.vue'
+import CarrerSection from '@/components/home/section/CarrerSection.vue'
+// import ContactSection from '@/components/home/section/ContactSection.vue'
 
-import { ref, watch,  } from 'vue';
+import { ref, watch,  } from 'vue'
 import { useScrollStore } from '@/store'
 
 const store = useScrollStore()
 
-const aboutRef = ref(null);
-const projectRef = ref(null);
-const skillRef = ref(null);
-const galleryRef = ref(null);
-const carrerRef = ref(null);
-const contactRef = ref(null);
+const aboutRef = ref(null)
+const projectRef = ref(null)
+const skillRef = ref(null)
+const galleryRef = ref(null)
+const carrerRef = ref(null)
+const contactRef = ref(null)
 
 watch(() => store.sectionToScroll, (newSection) => {
   if (newSection) {
-    let targetElement;
+    let targetElement
     switch (newSection) {
       case 'About':
-        targetElement = aboutRef.value;
-        break;
+        targetElement = aboutRef.value
+        break
       case 'Project':
-        targetElement = projectRef.value;
-        break;
+        targetElement = projectRef.value
+        break
       case 'Skill':
-        targetElement = skillRef.value;
-        break;
+        targetElement = skillRef.value
+        break
       case 'Gallery':
-        targetElement = galleryRef.value;
-        break;
+        targetElement = galleryRef.value
+        break
       case 'Carrer':
-        targetElement = carrerRef.value;
-        break;
+        targetElement = carrerRef.value
+        break
       case 'Contact':
-        targetElement = contactRef.value;
-        break;
+        targetElement = contactRef.value
+        break
     }
 
     if (targetElement) {
       window.scrollTo({
         top: targetElement.offsetTop,
         behavior: 'smooth',
-      });
+      })
     }
 
     // セクションをリセットする
-    store.setSectionToScroll('');
+    store.setSectionToScroll('')
   }
-});
+})
 </script>
 
 <style scoped>

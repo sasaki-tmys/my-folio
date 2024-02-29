@@ -3,7 +3,7 @@
     <v-col>
         <v-card flat color="secondary">
         <v-card-text>
-            <apexchart type="radar" :options="chartOptions" :series="chartSeries"></apexchart>
+            <apexchart :options="chartOptions" :series="chartSeries"></apexchart>
         </v-card-text>
         </v-card>
     </v-col>

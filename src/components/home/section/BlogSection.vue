@@ -14,15 +14,11 @@
 </template>
 
 <script setup>
+import blogTestData from '@/components/test/blogdata.json'
 import router from '@/router';
 import { ref } from 'vue';
 
-const blog_list = ref([
-    {id: '01', date: '2023年10月1日', category: 'その他', title: 'まだまだ暑いですな。季節の変わり目はいつも体調を崩してし...', },
-    {id: '02', date: '2023年10月8日', category: '居酒屋探訪', title: '寒かったのでおでんを食べに行きました。私が好きなおでんはま...', },
-    {id: '03', date: '2023年10月15日', category: '読了した本', title: '伊坂幸太郎の終末のフールを読み終えました。', },
-    {id: '04', date: '2023年11月20日', category: 'プログラミング', title: 'プログラミングの勉強としてブログ投稿プラットフォームの作成を始めました！', },
-])
+const blog_list = ref(blogTestData)
 
 const goToBlogPage = (postId) => {
     router.push({ name: 'blogpost', params: { id: postId } });

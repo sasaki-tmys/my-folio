@@ -3,17 +3,18 @@
     <h1 class="display-2 font-weight-bold mb-4">
         お問い合わせ
     </h1>
-    <v-form @submit.prevent="onSubmit" v-model="isValid">
+    <v-form 
+    @submit.prevent="onSubmit"
+    v-model="isValid"
+    >
         <v-text-field
         v-model="name.value.value"
-        :counter="10"
         :error-messages="name.errorMessage.value"
         label="氏名または企業名"
         ></v-text-field>
 
         <v-text-field
         v-model="phone.value.value"
-        :counter="7"
         :error-messages="phone.errorMessage.value"
         label="電話番号"
         ></v-text-field>
@@ -26,7 +27,6 @@
 
         <v-textarea
         v-model="select.value.value"
-        :items="items"
         :error-messages="select.errorMessage.value"
         label="問い合わせ内容"
         ></v-textarea>
@@ -82,7 +82,6 @@ const phone = useField('phone');
 const email = useField('email');
 const select = useField('select');
 const checkbox = useField('checkbox');
-const items = useField('item');
 const isValid = ref(false);
 
 const onSubmit = handleSubmit(values => {
