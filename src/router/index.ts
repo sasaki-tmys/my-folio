@@ -38,7 +38,7 @@ router.beforeEach(async (to, from, next) => {
         const token = params.get('token')
         console.log('token', token)
         console.log('import.meta.env.VITE_TOKEN_PATH', import.meta.env.VITE_TOKEN_PATH)
-        console.log(token)
+        console.log(token === import.meta.env.VITE_TOKEN_PATH)
         // tokenの検証
         if (token === import.meta.env.VITE_TOKEN_PATH) {
             // QRコードからの正しいアクセスの場合
