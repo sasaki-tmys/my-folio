@@ -10,5 +10,5 @@ export const useAuthStore = defineStore({
             this.isCameFromQRcode = flag
         }
     },
-    persist: true,
+    persist: true
 })
