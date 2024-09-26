@@ -3,7 +3,7 @@ import { ref } from 'vue'
 const icons = ref([
     { logo: 'mdi-facebook', link: 'https://www.facebook.com/profile.php?id=100093524602921' },
     { logo: 'mdi-twitter', link: 'https://qiita.com/ssk_tmys' },
-    { logo: 'mdi-github', link: 'https://github.com/sasaki-tmys' },
+    // { logo: 'mdi-github', link: 'https://github.com/sasaki-tmys' },
     {
         logo: 'mdi-instagram',
         link: 'https://instagram.com/ssk_tmys?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D'

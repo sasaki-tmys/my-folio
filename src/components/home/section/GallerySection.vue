@@ -16,7 +16,6 @@ const Gallery = [
     '/img/Gallery/GalleryCollection14.png',
     '/img/Gallery/GalleryCollection15.png'
 ]
-console.log(Gallery)
 </script>
 <template>
     <v-container id="GallerySection" class="padding">
