@@ -121,35 +121,35 @@ watch(
 
 <style scoped>
 .background-image1 {
-    background-image: url('@/assets/img/Background/Background1.png');
+    background-image: url('/img/Background/Background1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 .background-image2 {
-    background-image: url('@/assets/img/Background/Background2.png');
+    background-image: url('/img/Background/Background2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 .background-image3 {
-    background-image: url('@/assets/img/Background/Background3.png');
+    background-image: url('/img/Background/Background3.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 .background-image4 {
-    background-image: url('@/assets/img/Background/Background4.png');
+    background-image: url('/img/Background/Background4.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
 }
 .background-image5 {
-    background-image: url('@/assets/img/Background/Background5.png');
+    background-image: url('/img/Background/Background5.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
