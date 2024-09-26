@@ -46,10 +46,12 @@ router.beforeEach(async (to, from, next) => {
             next()
         } else {
             // 不正なtokenの場合
+            console.log('token === import.meta.env.VITE_TOKEN_PATH', token === import.meta.env.VITE_TOKEN_PATH)
             next('/forbidden')
         }
     } else {
         // `isCameFromQRcode`を持たないルートには`forbidden`にリダイレクト
+        console.log('isCameFromQRcodeがfalse')
         next('/forbidden')
     }
 })
