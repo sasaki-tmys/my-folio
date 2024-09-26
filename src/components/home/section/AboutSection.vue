@@ -3,7 +3,7 @@
         <v-row>
             <v-col cols="12">
                 <div>
-                    <v-img src="src/assets/logo.svg" height="200" />
+                    <v-img src="@/assets/logo.svg" height="200" />
                 </div>
             </v-col>
             <v-col class="mb-4">

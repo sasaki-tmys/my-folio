@@ -55,7 +55,7 @@ function openOtherService(url: string) {
         <v-row>
             <v-col cols="12" md="4" v-for="project in projects" :key="project.id">
                 <v-card variant="outlined">
-                    <v-img :src="`src/assets/img/Project/${project?.image}`" height="250px" />
+                    <v-img :src="`/img/Project/${project?.image}`" height="250px" />
 
                     <v-card-title>{{ project?.title }}</v-card-title>
                     <v-card-subtitle>{{ project?.subtitle }}</v-card-subtitle>
