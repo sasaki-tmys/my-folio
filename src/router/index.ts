@@ -36,7 +36,9 @@ router.beforeEach(async (to, from, next) => {
     if (to.matched.some((record) => record.meta.isCameFromQRcode)) {
         const params = new URLSearchParams(window.location.search)
         const token = params.get('token')
-
+        console.log('token', token)
+        console.log('import.meta.env.VITE_TOKEN_PATH', import.meta.env.VITE_TOKEN_PATH)
+        console.log(token)
         // tokenの検証
         if (token === import.meta.env.VITE_TOKEN_PATH) {
             // QRコードからの正しいアクセスの場合
@@ -51,6 +53,5 @@ router.beforeEach(async (to, from, next) => {
         next('/forbidden')
     }
 })
-
 
 export default router
