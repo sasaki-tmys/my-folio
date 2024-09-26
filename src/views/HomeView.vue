@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from '@/components/home/parts/HomeHeader.vue'
+import Footer from '@/components/global/FooterView.vue'
 import AboutSection from '@/components/home/section/AboutSection.vue'
 import ProjectSection from '@/components/home/section/ProjectSection.vue'
 import SkillSection from '@/components/home/section/SkillSection.vue'
@@ -8,9 +9,11 @@ import GallerySection from '@/components/home/section/GallerySection.vue'
 import CarrerSection from '@/components/home/section/CarrerSection.vue'
 // import ContactSection from '@/components/home/section/ContactSection.vue'
 
-import { ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useScrollStore } from '@/stores/scroll'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const store = useScrollStore()
 
 const aboutRef = ref(null)
@@ -62,6 +65,9 @@ watch(
         }
     }
 )
+onMounted(() => {
+    router.push('/')
+})
 </script>
 
 <template>
@@ -117,6 +123,7 @@ watch(
         <ContactSection name="ContactSection" ></ContactSection>
     </section> -->
     </v-main>
+    <Footer />
 </template>
 
 <style scoped>
