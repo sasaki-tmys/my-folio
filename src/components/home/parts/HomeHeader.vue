@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useScrollStore } from '@/stores/scroll'
+import { useRouter } from 'vue-router'
 
 const store = useScrollStore()
+const router = useRouter()
 
 const sections = [
     { title: 'このサイトについて', target: 'About' },
@@ -28,6 +30,16 @@ const scrollToTarget = (sectionRef: string) => {
                     color="background"
                     @click.stop="scrollToTarget(section.target)"
                     :text="section.title"
+                />
+            </v-col>
+            <v-col cols="auto">
+                <v-btn
+                    flat
+                    variant="elevated"
+                    color="background"
+                    target="_blank"
+                    text="BabylonJS"
+                    @click="router.push('/babylonfolio')"
                 />
             </v-col>
         </v-row>
