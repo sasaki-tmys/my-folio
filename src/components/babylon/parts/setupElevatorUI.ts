@@ -6,7 +6,7 @@ export function setupElevatorUI(
     floor: number,
     camera: BABYLON.UniversalCamera,
     models: { elevatorMesh?: BABYLON.AbstractMesh },
-    moveToFloor: (floor: number) => void,
+    moveToFloor: (floor: number) => void
 ): void {
     const advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI('UI')
 

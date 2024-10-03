@@ -16,7 +16,7 @@ export function createCamera(
         const xLimit = 3.2
         const zLimit = 8.2
         cam.position.x = Math.max(-xLimit, Math.min(xLimit, cam.position.x))
-        cam.position.y = Math.max(1,cam.position.y)
+        cam.position.y = Math.max(1, cam.position.y)
         cam.position.z = Math.max(-zLimit, Math.min(zLimit, cam.position.z))
     })
 

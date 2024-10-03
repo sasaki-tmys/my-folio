@@ -74,17 +74,24 @@ export function createGroundAndWalls(
         ceiling2.material = ceilingMaterial2
 
         // 上階に上がったときの地面
-        const ground1 = BABYLON.MeshBuilder.CreateGround('ground1', { width: 7.3, height: 20 }, scene)
+        const ground1 = BABYLON.MeshBuilder.CreateGround(
+            'ground1',
+            { width: 7.3, height: 20 },
+            scene
+        )
         ground1.position.x = 1.3
         ground1.position.y = wallHeight / 2
         ground1.material = materials.groundMaterial
 
-        const ground2 = BABYLON.MeshBuilder.CreateGround('ground2', { width: 2.7, height: 12 }, scene)
+        const ground2 = BABYLON.MeshBuilder.CreateGround(
+            'ground2',
+            { width: 2.7, height: 12 },
+            scene
+        )
         ground2.position.x = -3.6
         ground2.position.y = wallHeight / 2
         ground2.position.z = -4
         ground2.material = materials.groundMaterial
-        
     } else {
         const ceiling = BABYLON.MeshBuilder.CreateGround(
             'ceiling',

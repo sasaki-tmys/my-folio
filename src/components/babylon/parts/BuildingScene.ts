@@ -117,7 +117,7 @@ export class BuildingScene {
         this.scene.dispose()
 
         this.createFloorScene(floor)
-        
+
         this.engine.runRenderLoop(() => {
             if (this.scene && this.scene.activeCamera) {
                 this.scene.render()

@@ -46,7 +46,7 @@ onMounted(() => {
     hemisphericLight.intensity = 0.3
     hemisphericLight.specular = new Color3(0, 0, 0)
     hemisphericLight.groundColor = new Color3(1, 1, 1)
-    new DirectionalLight("directionalLight", new Vector3(-1, -2, -1), scene)
+    new DirectionalLight('directionalLight', new Vector3(-1, -2, -1), scene)
 
     // ========================
     // 環境テクスチャとスカイボックスの設定

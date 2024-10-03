@@ -9,20 +9,29 @@ export async function loadModels(
 
     if (floor < 5) {
         try {
-            const stairs = await BABYLON.SceneLoader.ImportMeshAsync('', '/models/', 'stairs.glb', scene)
+            const stairs = await BABYLON.SceneLoader.ImportMeshAsync(
+                '',
+                '/models/',
+                'stairs.glb',
+                scene
+            )
             models.stairMesh = stairs.meshes[0]
             models.stairMesh.position = new BABYLON.Vector3(-2.34, yOffset, 6.25)
             models.stairMesh.rotation = new BABYLON.Vector3(0, 0, 0)
             models.stairMesh.scaling = new BABYLON.Vector3(2, 1.5, 2)
             console.log(`${floor}F階段モデルの読み込みに成功しました！`)
-
         } catch (error: any) {
             console.log(`${floor}F階段モデルの読み込みに失敗しました！`)
         }
     }
 
     try {
-        const elevter = await BABYLON.SceneLoader.ImportMeshAsync('', '/models/', 'elevter.glb', scene)
+        const elevter = await BABYLON.SceneLoader.ImportMeshAsync(
+            '',
+            '/models/',
+            'elevter.glb',
+            scene
+        )
         models.elevatorMesh = elevter.meshes[0]
         models.elevatorMesh.position = new BABYLON.Vector3(-4.9, yOffset, -5)
         models.elevatorMesh.rotation = new BABYLON.Vector3(0, 0, 0)

@@ -80,7 +80,7 @@ export function animateCameraUpStairs(
         { deltaY: -30 }, // -120度へ
         { deltaY: -30 }, // -150度へ
         { deltaY: -30 }, // -180度へ
-        { deltaY: 0 }    // そのまま
+        { deltaY: 0 } // そのまま
     ]
 
     let currentRotation = startRotation.clone()
